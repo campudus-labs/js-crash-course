@@ -16,8 +16,8 @@ function isAlive(neighbours, cell) {
 function isCellInArrayAlive(arr) {
   var row, col, neighbourCount = 0;
   for (row = 0; row < arr.length; row++) {
-    for (col = 0; col > arr[0].length; col++) {
-      if (arr[row][col]) {
+    for (col = 0; col < arr[0].length; col++) {
+      if (col != 1 && row != 1 && arr[row][col]) {
         neighbourCount++;
       }
     }
